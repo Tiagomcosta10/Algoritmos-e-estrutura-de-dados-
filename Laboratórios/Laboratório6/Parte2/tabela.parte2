@@ -1,0 +1,26 @@
+===================================================================
+                       TABELA DE RASTREIO - PARTE 2
+===================================================================
+
+Operação          | Retorno | Pilha (base -> topo) | topo
+------------------+---------+----------------------+------
+empilha(10)       | -       | [10]                 | 1
+empilha(20)       | -       | [10, 20]             | 2
+desempilha()      | 20      | [10]                 | 1
+empilha(30)       | -       | [10, 30]             | 2
+empilha(40)       | -       | [10, 30, 40]         | 3
+desempilha()      | 40      | [10, 30]             | 2
+desempilha()      | 30      | [10]                 | 1
+empilha(50)       | -       | [10, 50]             | 2
+
+
+1. Ao final, o que está guardado em item[2]?
+R: O valor 40, pois mesmo n estando na pilha ele não foi sobrescrito e esta na memoria.
+
+2. Esse valor ainda faz parte da pilha?
+R: Não, pois está acima do topo atual (topo = 2) e é ignorado pela estrutura.
+
+3. Por que desempilha não precisa apagar nada do vetor?
+R: Porque o controle da pilha é feito exclusivamente pela variável topo. Qualquer elemento acima do topo deixa de fazer parte da pilha 
+e será sobrescrito quando um novo elemento for empilhado,
+e além disso colocar o valor como nulo só fara ter mais gasto.
