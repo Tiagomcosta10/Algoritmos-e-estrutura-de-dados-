@@ -1,0 +1,11 @@
+a) em função de C(n)=(n.(n-1))/2 para n = 5, 4+3+2+1,a quantidade de comparações é exatamente a mesma, 
+pois ambos testam todos os elementos de forma quadrática para garantir a ordenação.
+
+b) o bubble com vetor gasta memoria O(1) pq faz as trocas dentro. ja esse de pilha a gente cria 3 pilhas do tamanho de n, 
+entao o custo extra de memoria vira O(n).   
+
+c) com a pilha perdemos o acesso direto pelos indices do vetor. ai o codigo tem que compensar guardando
+a bolha numa variavel carry e usando as outras pilhas pra comparar e ir movendo os dados de um lado pro outro.   
+
+d) não vale a pena utilizar pilhas para ordenação, pois o custo de memória extra (O(n)) e a quantidade excessiva de operações de empilhar e desempilhar
+tornam o algoritmo muito ineficiente comparado à manipulação direta de vetores. e só é uutil para funções academicas mesmo.
