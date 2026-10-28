@@ -1,0 +1,81 @@
+
+Nome: Tiago Morais Costa
+Matrícula: 867656
+PARTE 2 - Rastreio no papel
+
+Fila inicial: vazia (primeiro == ultimo)
+
+#  Operação       Fila após a operação   Devolveu       primeiro==ultimo?
+1  inserir(10)    [10]                   -              False
+2  inserir(20)    [10, 20]               -              False
+3  remover()      [20]                   10             False
+4  inserir(30)    [20, 30]               -              False
+5  remover()      [30]                   20             False
+6  remover()      []                     30             True
+7  remover()      []                     erro           True
+8  inserir(40)    [40]                   -              False
+
+Pare e pense
+
+(a) Na operação 6, primeiro e ultimo apontam para a mesma célula: a que
+guardava o 30. Ela foi promovida a nó cabeça e também é a última célula.
+
+(b)sVazia() retorna true  então o
+método lança a exceção antes de tentar acessar e o  acesso causaria
+NullReferenceException.
+
+PARTE 3 - Percorrendo a fila
+
+Saída esperada após inverter e inserir(1):
+True
+False
+25
+75
+25, 20, 15, 10, 5
+25, 20, 15, 10, 5, 1
+
+Por que inserir 1 é um bom teste para ultimo: depois do inverter, a fila
+foi esvaziada e reconstruída com inserir. Se ultimo não tivesse sido
+atualizado corretamente , o novo 1 seria encadeado no lugar errado, e não apareceria no mostar.
+
+
+
+
+PARTE 4 - Caça-erros
+
+
+Versão A: inserir(x) { ultimo.prox = new Celula(x); }
+O que acontece: ultimo nunca avança. Com inserir(3); inserir(5); inserir(7),
+cada chamada sobrescreve o prox do nó cabeça. As células 3 e 5 ficam
+desconectadas e perdidas; a fila passa a ter apenas o 7 ([7]).
+Correção: avançar ultimo depois de encadear:
+    ultimo.prox = new Celula(x);
+    ultimo = ultimo.prox;
+
+Versão B: mostrar() começando em primeiro (e não em primeiro.prox)
+O que acontece: o nó cabeça é impresso junto com os elementos. Como o
+construtor padrão usa elemento 0, a saída de inserir(3); inserir(5);
+inserir(7) é [0, 3, 5, 7]. Em fila vazia sai [0].
+Correção: começar em primeiro.prox:
+    for (Celula i = primeiro.prox; i != null; i = i.prox)
+
+Versão C: tamanho() com condição i != ultimo
+O que acontece: o laço para antes de chegar à última célula, então ela não
+é contada. Com 3, 5 e 7 o resultado é 2 (e não 3). Além disso, em fila
+vazia: i começa em null, a condição null != ultimo é verdadeira, cont
+vira 1 e i.prox gera NullReferenceException.
+Correção: percorrer até null, começando em primeiro.prox:
+    for (Celula i = primeiro.prox; i != null; i = i.prox) cont++;
+
+PARTE 5 - Para que serve o ultimo?
+
+1. Número de passos 
+   n = 1000: passos = 499500
+   n = 2000: passos = 1999000
+
+
+
+3. Fila flexível x fila circular (vetor):
+
+Vantagem da flexível: não tem limite de tamanho. Cresce conforme preciso.
+Desvantagem da flexível: cada elemento tem um nó extra com um ponteiro, então usa mais memória. O vetor circular é mais simples e mais rápido na prática, mas tem tamanho fixo.

@@ -1,0 +1,14 @@
+C:\Users\tiago\Laboratorio7\bin\Debug\net10.0\Laboratorio7.exe
+C:\Users\tiago\Laboratorio7\bin\Debug\net10.0\Laboratorio7.deps.json
+C:\Users\tiago\Laboratorio7\bin\Debug\net10.0\Laboratorio7.runtimeconfig.json
+C:\Users\tiago\Laboratorio7\bin\Debug\net10.0\Laboratorio7.dll
+C:\Users\tiago\Laboratorio7\bin\Debug\net10.0\Laboratorio7.pdb
+C:\Users\tiago\Laboratorio7\obj\Debug\net10.0\Laboratorio7.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\tiago\Laboratorio7\obj\Debug\net10.0\Laboratorio7.AssemblyInfoInputs.cache
+C:\Users\tiago\Laboratorio7\obj\Debug\net10.0\Laboratorio7.AssemblyInfo.cs
+C:\Users\tiago\Laboratorio7\obj\Debug\net10.0\Laboratorio7.csproj.CoreCompileInputs.cache
+C:\Users\tiago\Laboratorio7\obj\Debug\net10.0\Laboratorio7.dll
+C:\Users\tiago\Laboratorio7\obj\Debug\net10.0\refint\Laboratorio7.dll
+C:\Users\tiago\Laboratorio7\obj\Debug\net10.0\Laboratorio7.pdb
+C:\Users\tiago\Laboratorio7\obj\Debug\net10.0\Laboratorio7.genruntimeconfig.cache
+C:\Users\tiago\Laboratorio7\obj\Debug\net10.0\ref\Laboratorio7.dll
